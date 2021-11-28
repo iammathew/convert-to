@@ -2,17 +2,25 @@
   "name": "convert-to",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "yarn prepare-ffmpeg-core && next dev",
+    "build": "yarn prepare-ffmpeg-core && next build",
+    "start": "yarn prepare-ffmpeg-core && next start",
+    "lint": "next lint",
+    "prepare-ffmpeg-core": "cp -r ./node_modules/@ffmpeg/core/ ./public/ffmpeg-core"
   },
   "dependencies": {
+    "@ffmpeg/core": "^0.10.0",
+    "@ffmpeg/ffmpeg": "^0.10.1",
+    "autoprefixer": "^10.4.0",
+    "file-saver": "^2.0.5",
     "next": "12.0.4",
+    "postcss": "^8.4.4",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "tailwindcss": "^2.2.19"
   },
   "devDependencies": {
+    "@types/file-saver": "^2.0.4",
     "@types/node": "16.11.10",
     "@types/react": "17.0.37",
     "eslint": "7",
