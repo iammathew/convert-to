@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "yarn prepare-ffmpeg-core && next dev",
     "build": "yarn prepare-ffmpeg-core && next build",
-    "start": "yarn prepare-ffmpeg-core && next start",
+    "start": "next start",
     "lint": "next lint",
     "prepare-ffmpeg-core": "cp -r ./node_modules/@ffmpeg/core/ ./public/ffmpeg-core"
   },
